@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Gift Nest, Itanagar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f0;--card:#ffffff;--tx:#3a1d33;--mut:#7d6477;--plum:#4a1f3d;--coral:#ef6358;--gold:#d9a441;--mint:#e3f1e8;--line:#f0dfd0;--shadow:rgba(74,31,61,.14);
+--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;color-scheme:light dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1019;--card:#2a1824;--tx:#f8ece4;--mut:#c0a6b8;--plum:#f1c9dc;--line:#43293a;--mint:#20332a;--shadow:rgba(0,0,0,.45)}}
+:root[data-theme="dark"]{--bg:#1e1019;--card:#2a1824;--tx:#f8ece4;--mut:#c0a6b8;--plum:#f1c9dc;--line:#43293a;--mint:#20332a;--shadow:rgba(0,0,0,.45)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font:400 1rem/1.55 var(--sans);-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:var(--serif);color:var(--plum);line-height:1.12}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.1rem}
+section{padding:3rem 0}
+h2{font-size:clamp(1.7rem,6vw,2.3rem);margin-bottom:.4rem}
+.sub{color:var(--mut);margin-bottom:1.4rem;max-width:52ch}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.7rem 1.4rem;border-radius:999px;border:2px solid transparent;font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.wa{background:#1fa855;color:#fff}.pri{background:var(--coral);color:#fff}.ghost{border-color:var(--plum);color:var(--plum);background:transparent}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.35rem var(--serif);color:var(--plum);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--coral);font-size:1.1rem}
+.nav nav{display:none;gap:1.4rem;font-weight:500}.nav nav a{text-decoration:none;color:var(--mut)}
+.nav .btn{min-height:42px;padding:.45rem 1rem;font-size:.95rem}
+@media(min-width:760px){.nav nav{display:flex}}
+
+.hero{padding:2.4rem 0 2rem;background:radial-gradient(circle at 85% 10%,#ffd9c9 0,transparent 45%),radial-gradient(circle at 5% 90%,var(--mint) 0,transparent 40%)}
+.hero .wrap{display:grid;gap:2rem;align-items:center}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-size:clamp(2.4rem,9vw,4rem)}
+.hero h1 em{color:var(--coral);font-style:italic}
+.hero p{font-size:1.15rem;color:var(--mut);margin:1rem 0 1.4rem;max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.perks{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;margin-top:1.3rem;font-size:.95rem;font-weight:500}
+.art{position:relative;height:290px;display:grid;place-items:center}
+.box{position:absolute;border-radius:18px;box-shadow:0 18px 30px var(--shadow);display:grid;place-items:center;font-size:3.2rem}
+.box::before,.box::after{content:"";position:absolute;background:rgba(255,255,255,.55)}
+.box::before{left:0;right:0;top:50%;height:14px;margin-top:-7px}.box::after{top:0;bottom:0;left:50%;width:14px;margin-left:-7px}
+.b1{width:150px;height:130px;background:#ef6358;left:12%;bottom:22px;transform:rotate(-6deg)}
+.b2{width:130px;height:118px;background:#4a1f3d;right:12%;bottom:34px;transform:rotate(7deg)}
+.b3{width:104px;height:96px;background:#d9a441;left:36%;top:6px;transform:rotate(-2deg)}
+.box span{position:relative;z-index:1;background:var(--bg);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem}
+
+.steps{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.2rem}
+.step b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--mint);color:var(--plum);margin-bottom:.6rem;font-family:var(--serif)}
+.step h3{font-size:1.15rem;margin-bottom:.2rem}.step p{color:var(--mut);font-size:.95rem}
+
+.filters{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));z-index:10;background:var(--bg);padding:.7rem 0;margin:0 -1.1rem 1rem;padding-inline:1.1rem;border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.2rem;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:42px;padding:.4rem 1rem;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--tx);font-weight:500}
+.chip[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:var(--bg)}
+.row2{display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-top:.6rem;font-size:.95rem;color:var(--mut)}
+select{font:inherit;padding:.5rem .8rem;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--tx);min-height:42px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:1.2rem}}@media(min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}}
+.p{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.p:hover{transform:translateY(-3px);box-shadow:0 12px 24px var(--shadow)}
+.pi{aspect-ratio:1/.9;display:grid;place-items:center;font-size:3.4rem;position:relative}
+.tag{position:absolute;left:8px;top:8px;background:var(--card);color:var(--plum);font-size:.72rem;font-weight:700;padding:.15rem .55rem;border-radius:999px}
+.pb{padding:.8rem .9rem 1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.pb h3{font:700 1rem/1.25 var(--sans);color:var(--tx)}
+.pr{font:700 1.15rem var(--serif);color:var(--plum)}
+.add{margin-top:auto;min-height:44px;border-radius:12px;border:2px solid var(--coral);background:transparent;color:var(--coral);font-weight:700}
+.add.in{background:var(--coral);color:#fff}
+.empty{grid-column:1/-1;text-align:center;padding:2rem 1rem;background:var(--card);border:1px dashed var(--line);border-radius:18px;color:var(--mut)}
+
+.custom{background:var(--plum);color:#fff;border-radius:26px;padding:2rem 1.4rem;display:grid;gap:1rem}
+.custom h2{color:#fff}.custom p{color:#ecd6e2;max-width:48ch}
+.why{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.why div{background:var(--mint);border-radius:18px;padding:1.2rem}.why b{font-size:1.8rem;display:block}.why h3{font-size:1.1rem;margin:.2rem 0}.why p{font-size:.93rem;color:var(--mut)}
+.rev{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.rev blockquote{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.2rem;font-family:var(--serif);font-style:italic}
+.rev cite{display:block;margin-top:.6rem;font:500 .9rem var(--sans);color:var(--mut);font-style:normal}
+.visit{display:grid;gap:1.2rem}
+@media(min-width:820px){.visit{grid-template-columns:1fr 1fr}}
+.vc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.5rem}
+.vc p{margin:.3rem 0}.open{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;padding:.25rem .7rem;border-radius:999px;background:var(--mint);margin-bottom:.8rem}
+.open::before{content:"";width:9px;height:9px;border-radius:50%;background:#1fa855}.open.closed::before{background:#c0392b}
+.hrs{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}.hrs td{padding:.3rem 0;border-bottom:1px dashed var(--line)}.hrs td:last-child{text-align:right;font-weight:500}
+.map{border-radius:22px;min-height:260px;background:repeating-linear-gradient(0deg,transparent 0 38px,rgba(74,31,61,.07) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(74,31,61,.07) 38px 40px),var(--mint);display:grid;place-items:center;text-align:center;padding:1.2rem;border:1px solid var(--line)}
+.pin{font-size:2.6rem}
+footer{background:var(--plum);color:#ecd6e2;padding:2rem 0 6rem;text-align:center;font-size:.92rem}
+footer b{font:700 1.3rem var(--serif);color:#fff;display:block;margin-bottom:.3rem}
+
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:25;display:flex;flex-direction:column;gap:.6rem;align-items:flex-end}
+.fab .btn{box-shadow:0 8px 20px var(--shadow)}
+.sheet-bg{position:fixed;inset:0;background:rgba(30,10,25,.55);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s}
+.sheet-bg.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:41;max-width:560px;margin:0 auto;background:var(--bg);border-radius:26px 26px 0 0;padding:1.2rem 1.2rem calc(1.2rem + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .3s cubic-bezier(.3,.8,.3,1);max-height:88vh;overflow:auto}
+.sheet.on{transform:none}
+.sheet h2{font-size:1.5rem}
+.li{display:flex;align-items:center;gap:.7rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.li .e{font-size:1.8rem}.li div{flex:1}.li small{color:var(--mut)}
+.q{display:flex;align-items:center;gap:.4rem}.q button{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--tx);font-size:1.1rem}
+.tot{display:flex;justify-content:space-between;font:700 1.2rem var(--serif);padding:.9rem 0;color:var(--plum)}
+input{width:100%;font:inherit;padding:.75rem .9rem;margin-bottom:.6rem;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--tx);min-height:48px}
+.x{float:right;background:none;border:0;font-size:1.6rem;color:var(--mut);width:44px;height:44px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#top"><i>🎁</i>The Gift Nest</a>
+  <nav><a href="#gifts">Gifts</a><a href="#hampers">Hampers</a><a href="#visit">Visit us</a></nav>
+  <a class="btn wa" href="#" data-wa="Hi! I’d like to know about your gifts.">WhatsApp</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div>
+    <h1>Gifts that say it <em>better</em>, wrapped with love.</h1>
+    <p>Birthdays, anniversaries, weddings and festivals. Pick a gift here, order on WhatsApp, and we wrap and deliver it across Itanagar.</p>
+    <div class="cta"><a class="btn pri" href="#gifts">Browse gifts</a><a class="btn ghost" href="#" data-wa="Hi! Can you help me pick a gift?">Help me choose</a></div>
+    <div class="perks"><span>🎀 Free gift wrapping</span><span>🛵 Same-day delivery</span><span>📱 UPI or cash on delivery</span></div>
+  </div>
+  <div class="art" aria-hidden="true"><div class="box b1"><span>🧸</span></div><div class="box b2"><span>🌹</span></div><div class="box b3"><span>🕯️</span></div></div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>Ordering takes a minute</h2><p class="sub">No sign-up and no payment on the website.</p>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Pick your gifts</h3><p>Filter by occasion and budget, then tap Add.</p></div>
+    <div class="step"><b>2</b><h3>Send on WhatsApp</h3><p>Your order is written for you. Just press send.</p></div>
+    <div class="step"><b>3</b><h3>We wrap and deliver</h3><p>We confirm the price and time, then bring it to the door.</p></div>
+  </div>
+</div></section>
+
+<section id="gifts" style="padding-top:1rem"><div class="wrap">
+  <h2>Find the perfect gift</h2><p class="sub">Choose an occasion, then set a budget.</p>
+  <div class="filters">
+    <div class="chips" id="chips" role="group" aria-label="Occasion"></div>
+    <div class="row2"><span id="count"></span><label>Budget <select id="budget"><option value="all">Any</option><option value="lo">Under ₹500</option><option value="mid">₹500 to ₹999</option><option value="hi">₹1000 and above</option></select></label></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="hampers"><div class="wrap"><div class="custom">
+  <h2>Want something made just for them?</h2>
+  <p>We make custom hampers, photo gifts, name keychains and wedding return gifts. Tell us your budget and who it’s for, and we’ll suggest ideas.</p>
+  <div><a class="btn wa" href="#" data-wa="Hi! I’d like a custom hamper. My budget is ₹ and it’s for ">Plan a custom hamper</a></div>
+</div></div></section>
+
+<section><div class="wrap">
+  <h2>Why people shop with us</h2><p class="sub">A small local shop that cares how the gift looks when it arrives.</p>
+  <div class="why">
+    <div><b>🎀</b><h3>Wrapped by hand</h3><p>Every order gets paper, ribbon and a free message card.</p></div>
+    <div><b>🛵</b><h3>Delivered the same day</h3><p>Order before 5 PM and we deliver in Itanagar and Naharlagun.</p></div>
+    <div><b>💬</b><h3>Real people on WhatsApp</h3><p>Questions, photos and changes handled in minutes.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Kind words</h2><p class="sub">Sample reviews for this demo. Real customer reviews will go here.</p>
+  <div class="rev">
+    <blockquote>“The hamper arrived beautifully packed, and my sister loved it.”<cite>Tadar, Itanagar</cite></blockquote>
+    <blockquote>“I ordered at noon and the gift reached us by evening.”<cite>Riya, Naharlagun</cite></blockquote>
+    <blockquote>“They helped me pick an anniversary gift within my budget.”<cite>Kabak, Itanagar</cite></blockquote>
+  </div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+  <h2>Visit the shop</h2><p class="sub">Come in, touch the gifts and get them wrapped on the spot.</p>
+  <div class="visit">
+    <div class="vc">
+      <span class="open" id="open">Checking…</span>
+      <p><b>The Gift Nest</b><br>Main Market Road, Itanagar<br>Arunachal Pradesh 791111</p>
+      <table class="hrs"><tr><td>Monday to Saturday</td><td>10:00 AM to 8:00 PM</td></tr><tr><td>Sunday</td><td>11:00 AM to 6:00 PM</td></tr></table>
+      <div class="cta"><a class="btn pri" href="tel:+919800000000">Call us</a><a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=gift+shop+Itanagar">Get directions</a></div>
+    </div>
+    <div class="map"><div><div class="pin">📍</div><b>Main Market Road</b><p style="color:var(--mut)">Near the main bus stop. A Google Map will show here.</p></div></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><b>The Gift Nest</b>Gifts for every occasion in Itanagar.<br>Demo website. Name, phone number and address are placeholders.</div></footer>
+
+<div class="fab">
+  <button class="btn pri" id="cartBtn" style="display:none"></button>
+  <a class="btn wa" href="#" data-wa="Hi! I’d like to know about your gifts." aria-label="Chat on WhatsApp">💬 Chat</a>
+</div>
+<div class="sheet-bg" id="bg"></div>
+<div class="sheet" id="sheet" role="dialog" aria-label="Your order">
+  <button class="x" id="close" aria-label="Close">×</button>
+  <h2>Your order</h2>
+  <div id="lines"></div>
+  <div class="tot"><span>Total</span><span id="total"></span></div>
+  <input id="nm" placeholder="Your name" autocomplete="name">
+  <input id="ar" placeholder="Delivery area, for example Chimpu" autocomplete="street-address">
+  <a class="btn wa" id="send" href="#" style="width:100%">Send order on WhatsApp</a>
+  <p style="font-size:.85rem;color:var(--mut);text-align:center;margin-top:.6rem">We’ll confirm the final price and delivery time on WhatsApp.</p>
+</div>
+
+<script>
+const NUM='919800000000';
+const occ=['All','Birthday','Anniversary','Rakhi','Diwali','Wedding','Baby'];
+const P=[
+['Scented candle trio',499,'🕯️',['Birthday','Anniversary'],'#ffe3d3','Bestseller'],
+['Personalised photo mug',349,'☕',['Birthday','Anniversary'],'#e3f1e8',''],
+['Teddy bear, 2 ft',799,'🧸',['Birthday','Anniversary','Baby'],'#ffd9e0','Popular'],
+['Rose and chocolate box',899,'🌹',['Anniversary'],'#ffd3d3',''],
+['Handmade rakhi set',249,'🎀',['Rakhi'],'#fbe6b8','Festive'],
+['Diwali diya and sweets hamper',1199,'🪔',['Diwali'],'#ffe9b0','Festive'],
+['Couple frame with fairy lights',649,'🖼️',['Anniversary','Wedding'],'#e4dcf5',''],
+['Baby gift basket',1499,'🍼',['Baby'],'#d9ecf7','New'],
+['Handwoven Arunachali stole',1299,'🧣',['Wedding','Diwali'],'#f5d9c6','Local craft'],
+['Wedding gift box',1999,'🎁',['Wedding'],'#f6d9ea','Premium'],
+['Succulent in a clay pot',299,'🪴',['Birthday'],'#d8efd9',''],
+['Custom name keychain',149,'🔑',['Birthday'],'#e9e9f7','Under ₹200']];
+const $=s=>document.querySelector(s),inr=n=>'₹'+n.toLocaleString('en-IN');
+let cur='All',cart={};
+const link=t=>`https://wa.me/${NUM}?text=${encodeURIComponent(t)}`;
+function wire(){document.querySelectorAll('[data-wa]').forEach(a=>{a.href=link(a.dataset.wa);a.target='_blank';a.rel='noopener'})}
+$('#chips').innerHTML=occ.map(o=>`<button class="chip" aria-pressed="${o==='All'}" data-o="${o}">${o==='All'?'All gifts':o}</button>`).join('');
+$('#chips').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;cur=b.dataset.o;document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));render()};
+$('#budget').onchange=render;
+function render(){const b=$('#budget').value;
+ const list=P.map((p,i)=>({p,i})).filter(({p})=>(cur==='All'||p[3].includes(cur))&&(b==='all'||(b==='lo'&&p[1]<500)||(b==='mid'&&p[1]>=500&&p[1]<1000)||(b==='hi'&&p[1]>=1000)));
+ $('#count').textContent=list.length+(list.length===1?' gift':' gifts');
+ $('#grid').innerHTML=list.length?list.map(({p,i})=>`<article class="p"><div class="pi" style="background:${p[4]}" aria-hidden="true">${p[5]?`<span class="tag">${p[5]}</span>`:''}${p[2]}</div><div class="pb"><h3>${p[0]}</h3><div class="pr">${inr(p[1])}</div><button class="add ${cart[i]?'in':''}" data-i="${i}">${cart[i]?'Added ✓ ('+cart[i]+')':'Add to order'}</button></div></article>`).join(''):`<div class="empty">Nothing matches that budget yet.<br><a href="#" data-wa="Hi! I’m looking for a ${cur==='All'?'':cur+' '}gift. My budget is ₹">Ask us on WhatsApp</a> and we’ll suggest something.</div>`;wire()}
+$('#grid').onclick=e=>{const b=e.target.closest('.add');if(!b)return;const i=b.dataset.i;cart[i]=(cart[i]||0)+1;render();upd()};
+function upd(){const n=Object.values(cart).reduce((a,b)=>a+b,0),t=Object.entries(cart).reduce((s,[i,q])=>s+P[i][1]*q,0),btn=$('#cartBtn');
+ btn.style.display=n?'inline-flex':'none';btn.textContent=`🛍️ View order (${n}) · ${inr(t)}`;
+ $('#lines').innerHTML=Object.entries(cart).map(([i,q])=>`<div class="li"><span class="e">${P[i][2]}</span><div>${P[i][0]}<br><small>${inr(P[i][1])} each</small></div><div class="q"><button data-d="-1" data-i="${i}" aria-label="Remove one">−</button><b>${q}</b><button data-d="1" data-i="${i}" aria-label="Add one">+</button></div></div>`).join('');
+ $('#total').textContent=inr(t);if(!n)shut()}
+$('#lines').onclick=e=>{const b=e.target.closest('[data-d]');if(!b)return;const i=b.dataset.i;cart[i]+=+b.dataset.d;if(cart[i]<=0)delete cart[i];render();upd()};
+const open_=()=>{$('#sheet').classList.add('on');$('#bg').classList.add('on')},shut=()=>{$('#sheet').classList.remove('on');$('#bg').classList.remove('on')};
+$('#cartBtn').onclick=open_;$('#close').onclick=shut;$('#bg').onclick=shut;
+$('#send').onclick=e=>{const t=Object.entries(cart).reduce((s,[i,q])=>s+P[i][1]*q,0);
+ const msg=`Hi The Gift Nest! I’d like to order:\n`+Object.entries(cart).map(([i,q])=>`• ${P[i][0]} × ${q} = ${inr(P[i][1]*q)}`).join('\n')+`\nTotal: ${inr(t)}\nName: ${$('#nm').value||'-'}\nDelivery area: ${$('#ar').value||'-'}`;
+ e.currentTarget.href=link(msg);e.currentTarget.target='_blank'};
+// open now (IST)
+(function(){const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'})),h=d.getHours()+d.getMinutes()/60,sun=d.getDay()===0,o=sun?11:10,c=sun?18:20,on=h>=o&&h<c,el=$('#open');
+ el.textContent=on?'Open now':'Closed now';el.classList.toggle('closed',!on)})();
+render();upd();wire();
+</script>
+</body>
+</html>
